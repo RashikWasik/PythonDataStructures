@@ -21,3 +21,22 @@ with open(fname,"r") as textfile:
 li1 = sorted(li)
 
 print(li1)
+
+
+
+# It can be solved in this way too
+
+
+fname = input("Enter file name: ")
+
+li=list()
+
+with open(fname,"r") as textfile:
+    for i in textfile:
+        words = i.rstrip().split()
+        li = li + words
+        
+final_list = set(li)
+final_list = sorted(final_list)  # returns a list of the elements in sorted order
+
+print(final_list)
